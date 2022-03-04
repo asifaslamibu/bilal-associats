@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:52 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Bilal Associates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link href="/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/forms/theme-checkbox-radio.css">
+
+    <!--  END CUSTOM STYLE FILE  -->
+    <link href="/plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/plugins/select2/select2.min.css">
+    <link href="/plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link rel="stylesheet" type="text/css" href="/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/table/datatable/custom_dt_html5.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/select2/select2.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/plugins/bootstrap-select/bootstrap-select.min.css">
+
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+</head>
+
+<style>
+    /* 
+        Note: If you are using this demo without activity sidebar then you have to make some changes by applying the .admin-data-content css inside structure.css
+    */
+
+    .admin-data-content {
+        height: calc(100vh - 132px);
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .admin-header .header-container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .footer-wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+
+
+    /* User Profile Dropdown*/
+    .admin-header .header-container .nav-item.user-profile-dropdown {
+        align-self: center;
+        padding: 0;
+        border-radius: 8px;
+        margin-left: 22px;
+        margin-right: 0;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 20px 0 16px;
+        transition: .5s;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle:after {
+        display: none;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle svg {
+        color: #515365;
+        width: 15px;
+        height: 15px;
+        align-self: center;
+        margin-left: 6px;
+        stroke-width: 1.7px;
+        -webkit-transition: -webkit-transform .2s ease-in-out;
+        transition: -webkit-transform .2s ease-in-out;
+        transition: transform .2s ease-in-out;
+        transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown.show .dropdown-toggle svg {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media {
+        margin: 0;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media img {
+        width: 33px;
+        height: 33px;
+        border-radius: 6px;
+        box-shadow: 0 0px 0.9px rgba(0, 0, 0, 0.07), 0 0px 7px rgba(0, 0, 0, 0.14);
+        margin-right: 13px;
+        border: none;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body {
+        flex: auto;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body h6 {
+        color: #4361ee;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body h6 span {
+        color: #515365;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body p {
+        color: #bfc9d4;
+        font-size: 10px;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .nav-link.user {
+        padding: 0 0;
+        font-size: 25px;
+    }
+
+    .admin-header .header-container .nav-item.dropdown.user-profile-dropdown .nav-link:after {
+        display: none;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu {
+        z-index: 9999;
+        max-width: 13rem;
+        padding: 0 11px;
+        top: 166% !important;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu.show {
+        top: 42px !important;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section {
+        padding: 16px 14px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-right: -12px;
+        margin-left: -12px;
+        background: rgb(96 152 149);
+        margin-top: -1px;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media {
+        margin: 0;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media img {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 3px solid rgb(224 230 237 / 58%);
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body {
+        align-self: center;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body h5 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: #fafafa;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body p {
+        font-size: 11px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: #e0e6ed;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item {
+        padding: 0;
+        background: transparent;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item a {
+        display: block;
+        color: #3b3f5c;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 9px 14px;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item a:hover {
+        color: #000
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item.active,
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:active {
+        background-color: transparent;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:not(:last-child) {
+        border-bottom: 1px solid #ebedf2;
+    }
+
+    .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item svg {
+        width: 17px;
+        margin-right: 7px;
+        height: 17px;
+        color: #009688;
+        fill: rgb(0 150 136 / 13%);
+    }
+
+    #content .col-left {
+        margin-right: 0;
+    }
+
+    /*
+        The below code is for DEMO purpose --- Use it if you are using this demo otherwise, Remove it
+    */
+    .navbar .navbar-item.navbar-dropdown {
+        margin-left: auto;
+    }
+
+    .layout-px-spacing {
+        min-height: calc(100vh - 145px) !important;
+    }
+</style>
+
+<body class="sidebar-noneoverflow admin-header">
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <%- include("sidebar") %>
+            <!--  END SIDEBAR  -->
+
+            <!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+                <div class="layout-px-spacing">
+
+                    <div class="content-container">
+
+                        <div class="col layout-top-spacing">
+                            <div class="col-content">
+
+                                <div class="header-container">
+                                    <header class="header navbar navbar-expand-sm">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0);" class="sidebarCollapse"
+                                                data-placement="bottom">
+                                                <div class="bt-menu-trigger">
+                                                    <span></span>
+                                                </div>
+                                            </a>
+
+
+
+                                            <div class="page-header">
+                                                <div class="page-title">
+                                                    <h3>User Management</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="header-actions">
+                                            <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                <div class="dropdown custom-dropdown-icon">
+                                                    <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                        <%- include("logout") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="admin-data-content layout-top-spacing">
+
+                                    <div class="row layout-top-spacing" id="cancel-row">
+
+                                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                                            <div class="widget-content widget-content-area br-6">
+
+                                                <div style="padding: 1%;">
+                                                    <button type="button" class="btn btn-primary mb-2 mr-2"
+                                                        data-toggle="modal" data-target="#exampleModal">
+                                                        Add User
+                                                    </button>
+                                                </div>
+
+                                                <!-- Modal -->
+                                                <table id="html5-extension" class="table table-hover non-hover"
+                                                    style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>S.NO</th>
+                                                            <th>User Name</th>
+                                                            <th>First Name</th>
+                                                            <th>Last Name</th>
+                                                            <th>Cnic</th>
+                                                            <th>Email</th>
+                                                            <th>Password</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <% if(userData.length!=0){ var i=1; var j=1;
+                                                            userData.forEach(function(data) { %>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= i %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.username %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.fname %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.lname %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.cnic %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.email %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= data.password %>
+                                                                </td>
+                                                                
+                                                            </tr>
+
+                                                            <% i++}) %>
+                                                                <% } %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!--  END CONTENT AREA  -->
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">User Management</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
+                </div>
+                <div class="modal-body">
+                    <form action="/add_users" method="POST">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-row mb-4">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Username</label>
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Enter Name" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4">CNIC</label>
+                                            <input type="text" class="form-control" id="cnic" name="cnic"
+                                                placeholder="Enter Cnic" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">First Name</label>
+                                            <input type="text" class="form-control" id="fname" name="fname"
+                                                placeholder="Enter First Name" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Last Name</label>
+                                            <input type="text" class="form-control" id="lname" name="lname"
+                                                placeholder="Enter Last Name" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Email/Username</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Enter Email/Username" required>
+                                        </div>
+
+
+                                        <div class="form-group col-md-6  ">
+
+                                            <label for="" class="lab"> Enter
+                                                Password</label>
+                                            <input type="password" id="password" name="password" required minlength="8"
+                                                class="form-control input" placeholder="Enter Password">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" id="togglePassword"
+                                                class="feather feather-eye"
+                                                style="    position: absolute;top: 42px;right: 13px;color: #888ea8;fill: rgba(0, 23, 55, 0.08);width: 17px;cursor: pointer;">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </div>
+
+
+                                        <!-- <div class="form-group col-md-6 ">
+    
+                                            <label for="" class="lab"> Confirm Password</label>
+                                            <input type="password" id="confirm_password" name="confirm_password" required
+                                                minlength="8" class="form-control input" placeholder="Confirm Password">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" id="togglePassword1"
+                                                class="feather feather-eye"
+                                                style="    position: absolute;top: 42px;right: 13px;color: #888ea8;fill: rgba(0, 23, 55, 0.08);width: 17px;cursor: pointer;">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+    
+    
+    
+                                        </div> -->
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END MAIN CONTAINER -->
+    <script type="text/javascript">
+
+        $('#enter').click(function () {
+
+            $.ajax({
+                url: '/ajax',
+                type: 'POST',
+                cache: false,
+                data: { field1: 1, field2: 2 },
+                success: function (data) {
+                    alert('Success!')
+                }
+                , error: function (jqXHR, textStatus, err) {
+                    alert('text status ' + textStatus + ', err ' + err)
+                }
+            })
+        });
+
+        //    ----------------------------------------------------------
+        function deleteT(idT) {
+            console.log("running ==>" + idT);
+
+            $.ajax({
+                type: 'get',
+                url: '/tdelete1?deleteT=' + idT,
+                datatype: 'json',
+                success: function (response) {
+                    $('.widget-content .message').on('click', function () {
+                        swal({
+                            title: 'Saved succesfully',
+                            padding: '2em'
+                        })
+                    })
+                    $("#html5-extension").load(" #html5-extension");
+                    console.log("updated")
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+
+        }
+
+    </script>
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <!-- <script>
+        function myFunction() {
+         document.
+        }
+        </script> -->
+
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+    <script src="/plugins/table/datatable/datatables.js"></script>
+    <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+    <script src="/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script>
+        $('#html5-extension').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            buttons: {
+                buttons: [
+                    { extend: 'copy', className: 'btn btn-sm' },
+
+                    { extend: 'csv', className: 'btn btn-sm' },
+                    { extend: 'excel', className: 'btn btn-sm' },
+                    { extend: 'print', className: 'btn btn-sm' }
+                ]
+            },
+            "oLanguage": {
+                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
+    <script src="/plugins/highlight/highlight.pack.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="/assets/js/scrollspyNav.js"></script>
+    <script src="/plugins/flatpickr/flatpickr.js"></script>
+    <script src="/plugins/noUiSlider/nouislider.min.js"></script>
+
+    <!-- <script src="plugins/flatpickr/custom-flatpickr.js"></script> -->
+    <script src="/plugins/noUiSlider/custom-nouiSlider.js"></script>
+    <script src="/plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+    <script src="/plugins/select2/select2.min.js"></script>
+    <script src="/plugins/select2/custom-select2.js"></script>
+    <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+    <script>
+        const togglePassword1 = document.querySelector('#togglePassword1');
+        const password1 = document.querySelector('#confirm_password');
+
+        togglePassword1.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+            password1.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+    <script>
+        var password2 = document.getElementById("password")
+            , confirm_password2 = document.getElementById("confirm_password");
+        function validatePassword() {
+            if (password2.value != confirm_password2.value) {
+                confirm_password2.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password2.setCustomValidity('');
+            }
+        }
+        password2.onchange = validatePassword;
+        confirm_password2.onkeyup = validatePassword;
+    </script>
+</body>
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:54 GMT -->
+
+</html>

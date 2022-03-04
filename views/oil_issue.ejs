@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:52 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Bilal Associates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link href="/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/custom-nouiSlider.css" rel="stylesheet" type="text/css">
+    <link href="plugins/bootstrap-range-Slider/bootstrap-slider.css" rel="stylesheet" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-select/bootstrap-select.min.css">
+
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+</head>
+<style>
+    .select3 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border: 1px solid #bfc9d4;
+        color: #3b3f5c !important;
+        font-size: 15px;
+        padding: 8px 10px;
+        letter-spacing: 1px;
+        background-color: #fff;
+        height: auto;
+        padding: .75rem 1.25rem;
+        border-radius: 6px;
+        box-shadow: none;
+
+
+    }
+
+    .select3::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #f6f7f8;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: .25s all ease;
+        -o-transition: .25s all ease;
+        transition: .25s all ease;
+    }
+
+    /* Transition */
+    .select3:hover::after {
+        color: #f6f7f8;
+    }
+</style>
+
+<body class="sidebar-noneoverflow admin-header">
+    <script>
+        var check_Q;
+    </script>
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <%- include("sidebar") %>
+            <!--  END SIDEBAR  -->
+
+            <!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+                <div class="layout-px-spacing">
+
+                    <div class="content-container">
+
+                        <div class="col layout-top-spacing">
+                            <div class="col-content">
+
+                                <div class="header-container">
+                                    <header class="header navbar navbar-expand-sm">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0);" class="sidebarCollapse"
+                                                data-placement="bottom">
+                                                <div class="bt-menu-trigger">
+                                                    <span></span>
+                                                </div>
+                                            </a>
+
+
+
+                                            <div class="page-header">
+                                                <div class="page-title">
+                                                    <h3>Inventory Management</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="header-actions">
+                                            <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                <div class="dropdown custom-dropdown-icon">
+                                                    <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                        <%- include("logout") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="admin-data-content layout-top-spacing">
+
+                                    <div class="row layout-top-spacing" id="cancel-row">
+
+                                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                                            <div class="widget-content widget-content-area br-6">
+                                                <!-- Button trigger modal -->
+
+
+                                                <div class="card-header">
+                                                    <h3 class="card-title">Oil Issue
+                                                    </h3>
+                                                </div>
+                                                <!-- /.card-header -->
+
+                                                <div class="card-body">
+
+                                                    <div class="row ">
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Vehicle Number <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <!-- <input class="form-control " type="text" id="v_no"
+                                                                    name="v_no" placeholder="Enter Vahicle Number"> -->
+
+                                                                <select class="selectpicker" data-live-search="true"
+                                                                    data-width="100%" id="v_no" name="v_no">
+                                                                    <option selected="selected" value="0">--Select
+                                                                        Vehicle-----</option>
+                                                                    <% for (const i in vehicle_reg) { %>
+                                                                        <option value="<%= vehicle_reg[i].id%>">
+                                                                            <%= vehicle_reg[i].v_no %>
+                                                                        </option>
+                                                                        <% } %>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="txtFirstName">Oil Type <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="txtFirstName"></label></label>
+                                                                <div class="input-group">
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="oil_type" name="oil_type">
+                                                                        <option selected="selected" value="0">--Select
+                                                                            Oil Type-----</option>
+                                                                        <% for (const i in userData) { %>
+                                                                            <option value="<%= userData[i].id%>">
+                                                                                <%= userData[i].brand_name %>
+                                                                            </option>
+                                                                            <% } %>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="txtLastName">
+                                                                    Supply Type <label id="_txtCustomerName-error"
+                                                                        class="error" for="txtLastName"></label></label>
+                                                                <div class="input-group">
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="s_type" name="s_type">
+                                                                        <option selected="selected" value="0">--Select
+                                                                            Supply Type--</option>
+                                                                        <option value="1">VEHICLE</option>
+                                                                        <option value="2">BIG GENERATOR</option>
+                                                                        <option value="3">SMALL GENERATOR</option>
+                                                                        <option value="4">MECHANICAL PART SERVICES
+                                                                        </option>
+                                                                        <option value="5">AIR COMPRESSOR</option>
+                                                                        <option value="6">CP PORT QASIM</option>
+                                                                        <option value="7">CP GENERATOR</option>
+                                                                        <option value="8">2 ACRE</option>
+                                                                        <option value="9">4 ACRE</option>
+                                                                        <option value="10">SUPREME</option>
+                                                                    </select>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label>Company</label>
+                                                                <select class="selectpicker" data-live-search="true"
+                                                                    data-width="100%" id="company" onchange="changeFunc1();"
+                                                                    name="company">
+                                                                    <option value="">Select Company </option>
+                                                                    <% for (const i in company) { %>
+                                                                        <option value="<%= company[i].id%>">
+                                                                            <%= company[i].company_name %>
+                                                                        </option>
+                                                                        <% } %>
+
+                                                                </select>
+                                                            </div>
+                                                        </div> -->
+
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Warehouse <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+
+                                                                <select class="selectpicker" data-live-search="true"
+                                                                    data-width="100%" id="w_house" name="w_house"
+                                                                    onchange="changeFunc();">
+                                                                    <option value="">Select Warehouse</option>
+                                                                    <% for (const i in w_house) { %>
+                                                                        <option value="<%= w_house[i].id%>">
+                                                                            <%= w_house[i].name %>
+                                                                        </option>
+                                                                        <% } %>
+                                                                    
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="txtEDob"> Quantity <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="txtEDob"
+                                                                        style="display: none;"></label></label>
+
+                                                                <div class="input-group date" id="reservationdate2"
+                                                                    data-target-input="nearest">
+                                                                    <input type="text" class="form-control"
+                                                                        id="quantity" name="quantity"
+                                                                        placeholder="Enter Quantity">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Price per/liter <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <input class="form-control " type="text" id="price"
+                                                                    name="price" placeholder="Enter Price">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Issue Date <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <input id="basicFlatpickr"
+                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                    type="text" placeholder="Select Date.."
+                                                                    name="basicFlatpickr"
+                                                                    placeholder="Enter Issue Date">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlgender">Operation<label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlgender"></label></label>
+                                                                <div class="input-group">
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="opr" name="opr">
+                                                                        <option value="0">--Select Vehicle TOperation--
+                                                                        </option>
+                                                                        <option value="1">Bay West</option>
+                                                                        <option value="2">BLMT Yard</option>
+                                                                        <option value="3">KPT (West Wharf)</option>
+                                                                        <option value="4">Port Qasim (Suprime)</option>
+                                                                        <option value="5">Port Qasim (Jummah Goth)
+                                                                        </option>
+                                                                        <option value="6">Musharaf yard (Axis)</option>
+                                                                        <option value="7">Port Qasim (04 Acre)</option>
+                                                                        <option value="8">Port Qasim (02 Acre)</option>
+                                                                        <option value="9">SAPT</option>
+                                                                        <option value="10">KICT</option>
+                                                                        <option value="11">KBX Yard</option>
+                                                                        <option value="12">KPT (East Wharf)</option>
+                                                                        <option value="13">Lahore Operation </option>
+                                                                        <option value="14">Oil Tanker Operation
+                                                                        </option>
+                                                                        <option value="15">Half Bodies Operation
+                                                                        </option>
+                                                                        <option value="16">Railway Operation </option>
+                                                                        <option value="17">Local Trailer Operation
+                                                                        </option>
+                                                                        <option value="18">Port Qasim (10 Acre)</option>
+                                                                        <option value="19">Port Qasim (FFS Yard)
+                                                                        </option>
+                                                                        <option value="20">Office</option>
+                                                                        <option value="21">CP (PORT QASIM)</option>
+                                                                    </select>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlgender">Working Hours<label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlgender"></label></label>
+                                                                <div class="input-group">
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="work_hr" name="work_hr">
+                                                                        <option value="0">--Select Hours--</option>
+                                                                        <option value="1">1 hr</option>
+                                                                        <option value="2">2 hr</option>
+                                                                        <option value="3">3 hr</option>
+                                                                        <option value="4">4 hr</option>
+                                                                        <option value="5">5 hr</option>
+                                                                        <option value="6">6 hr</option>
+                                                                        <option value="7">7 hr</option>
+                                                                        <option value="8">8 hr</option>
+                                                                        <option value="9">9 hr</option>
+                                                                        <option value="10">10 hr</option>
+                                                                        <option value="11">11 hr</option>
+                                                                        <option value="12">12 hr</option>
+                                                                        <option value="13">13 hr </option>
+                                                                        <option value="14">14 hr</option>
+                                                                        <option value="15">15 hr</option>
+                                                                        <option value="16">16 hr </option>
+                                                                        <option value="17">17 hr</option>
+                                                                        <option value="18">18 hr</option>
+                                                                        <option value="19">19 hr</option>
+                                                                        <option value="20">20 hr</option>
+                                                                        <option value="21">21 hr</option>
+                                                                        <option value="22">22 hr</option>
+                                                                        <option value="23">23 hr</option>
+                                                                        <option value="24">24 hr</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Oil Change Hours <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <input id="change_hr" class="form-control" type="text"
+                                                                    name="change_hr" placeholder="Enter Hour">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Expected hours <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <input id="expect_hr" class="form-control" type="text"
+                                                                    name="expect_hr" placeholder="Enter Expected Hour">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <!-- text input -->
+                                                            <div class="form-group">
+                                                                <label for="ddlstatus"> Expected Date <label
+                                                                        id="_txtCustomerName-error" class="error"
+                                                                        for="ddlstatus"></label></label>
+                                                                <input id="basicFlatpickr1"
+                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                    type="text" placeholder="Select Expected Date.."
+                                                                    name="basicFlatpickr1">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label for="txtEmpCnic">
+                                                                    Remarks<label id="_txtCustomerName-error"
+                                                                        class="error" for="txtEmpCnic"></label></label>
+                                                                <div class="input-group">
+                                                                    <textarea class="form-control" id="remark" rows="3"
+                                                                        placeholder="Enter Remarks"></textarea>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="submit" class="btn btn-primary"
+                                                                    style="float: right;" id="btn">Submit</button>
+                                                                <button onclick="location.href='/add_inv';"
+                                                                    type="button" class="btn  mr-3 "
+                                                                    style="float: right;">
+                                                                    Cancel
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <!-- /.card-Body employee -->
+
+
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+    </div>
+    <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+    <script src="/plugins/table/datatable/datatables.js"></script>
+    <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+    <script src="/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script>
+        $('#html5-extension').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            buttons: {
+                buttons: [
+                    { extend: 'copy', className: 'btn btn-sm' },
+
+                    { extend: 'csv', className: 'btn btn-sm' },
+                    { extend: 'excel', className: 'btn btn-sm' },
+                    { extend: 'print', className: 'btn btn-sm' }
+                ]
+            },
+            "oLanguage": {
+                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
+    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/flatpickr/flatpickr.js"></script>
+    <script src="plugins/noUiSlider/nouislider.min.js"></script>
+
+    <!-- <script src="plugins/flatpickr/custom-flatpickr.js"></script> -->
+    <script src="plugins/noUiSlider/custom-nouiSlider.js"></script>
+    <script src="plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <script>
+        var f1 = flatpickr(document.getElementById('basicFlatpickr'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+    </script>
+    <script>
+        var ss = $(".basic").select2({
+            tags: true,
+        });
+
+    </script>
+    <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
+
+    <script>
+        function changeFunc() {
+            var selectBox = document.getElementById("w_house");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log("han " + selectedValue);
+            //    $.get('/area?id=' + selectedValue );
+            // $.ajax({
+            //     type: 'GET',
+            //     url: '/oil_toVehicle?id=' + selectedValue,
+            //     dataType: 'json',
+            //     success: function (response) {
+
+            //         var len = response.length;
+
+            //         $("#t_num").empty();
+            //         for (var i = 0; i < len; i++) {
+
+            //             var id = response[i]['id'];
+            //             var no = response[i]['product_no'];
+            //             console.log(id + "  " + no)
+            //             //$("#area2").append("<option value='"+id+"'>"+name+"</option>");
+            //             $('#t_num').append(`<option value="${id}">${no}</option>`);
+
+            //         }
+            //     },
+            //     error: function (data) {
+            //         console.log("Error.", data);
+            //     }
+            // });
+
+            function getData() {
+                return $.ajax({
+                    url: '/oil_toVehicle?id=' + selectedValue,
+                    type: 'GET'
+                });
+            }
+
+            function handleData(data /* , textStatus, jqXHR */) {
+                // alert(data[0]['oil_name']);
+                var id = data['warehouse_id'];
+                var name = data['name'];
+                var quantity = data['quantity'];
+                check_Q = quantity;
+
+                console.log("Oil quantity " + check_Q);
+
+                var btn = document.getElementById("btn");
+                btn.addEventListener("click", function () {
+
+                    var v_no = document.getElementById("v_no").value;
+                    var oil_type = document.getElementById("oil_type").value;
+                    var s_type = document.getElementById("s_type").value;
+                    var Quatities = document.getElementById("quantity").value;
+                    // var company = document.getElementById("company").value;
+                    var w_house = document.getElementById("w_house").value;
+                    var price = document.getElementById("price").value;
+                    var iss_date = document.getElementById("basicFlatpickr").value;
+                    var opr = document.getElementById("opr").value;
+                    var remark = document.getElementById("remark").value;
+                    var change_hr = document.getElementById("change_hr").value;
+                    var expect_hr = document.getElementById("expect_hr").value;
+                    var expect_date = document.getElementById("basicFlatpickr1").value;
+
+                    console.log("Andar " + Quatities);
+                    if (check_Q >= Quatities) {
+                        return $.ajax({
+                            url: '/oil_to_vehi?v_no=' + v_no + '&oil_type=' + oil_type + '&s_type=' + s_type + '&Quatities=' + Quatities + '&w_house=' + w_house + '&price=' + price + '&iss_date=' + iss_date + '&opr=' + opr + '&main_id=' + id + '&total=' + check_Q + '&remark=' + remark + '&change_hr=' + change_hr + '&expect_hr=' + expect_hr + '&expect_date=' + expect_date,
+                            type: 'GET',
+                            datatype: 'json',
+                            success: function (response) {
+                                console.log("updated")
+                                window.location.reload();
+                            },
+                        });
+
+                    }
+                    else {
+                        alert("Quantity not Available..... Only " + check_Q + " Ltr oil Available.");
+                    }
+
+
+                })
+
+                //do some stuff
+            }
+
+            getData().done(handleData);
+        }
+    </script>
+
+<script>
+    function changeFunc1() {
+        var selectBox = document.getElementById("company");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        console.log("han " + selectedValue);
+
+        $.ajax({
+                type: 'GET',
+                url: '/comp_wearhouse?id=' + selectedValue,
+                dataType: 'json',
+                success: function (response) {
+
+                    var len = response.length;
+
+                    $("#w_house").empty();
+                    for (var i = 0; i < len; i++) {
+
+                        var id = response[i]['wearhouse_id'];
+                        var no = response[i]['name'];
+                        console.log(id + "  " + no)
+                        //$("#area2").append("<option value='"+id+"'>"+name+"</option>");
+                        $('#w_house').append(`<option value="${id}">${no}</option>`);
+
+                    }
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+    }
+
+</script>
+</body>
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:54 GMT -->
+
+</html>

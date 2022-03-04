@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:52 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Bilal Associates | Oil Assign To Warehouse</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link href="/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/custom-nouiSlider.css" rel="stylesheet" type="text/css">
+    <link href="plugins/bootstrap-range-Slider/bootstrap-slider.css" rel="stylesheet" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-select/bootstrap-select.min.css">
+
+
+</head>
+<style>
+    .select3 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border: 1px solid #bfc9d4;
+        color: #3b3f5c !important;
+        font-size: 15px;
+        padding: 8px 10px;
+        letter-spacing: 1px;
+        background-color: #fff;
+        height: auto;
+        padding: .75rem 1.25rem;
+        border-radius: 6px;
+        box-shadow: none;
+
+
+    }
+
+    .select3::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #f6f7f8;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: .25s all ease;
+        -o-transition: .25s all ease;
+        transition: .25s all ease;
+    }
+
+    /* Transition */
+    .select3:hover::after {
+        color: #f6f7f8;
+    }
+</style>
+
+<body class="sidebar-noneoverflow admin-header">
+    <script>
+        var product = [];
+        var p_name = [];
+        var selects = [];
+        var check_Q;
+    </script>
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <%- include("sidebar") %>
+            <!--  END SIDEBAR  -->
+
+            <!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+                <div class="layout-px-spacing">
+
+                    <div class="content-container">
+
+                        <div class="col layout-top-spacing">
+                            <div class="col-content">
+
+                                <div class="header-container">
+                                    <header class="header navbar navbar-expand-sm">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0);" class="sidebarCollapse"
+                                                data-placement="bottom">
+                                                <div class="bt-menu-trigger">
+                                                    <span></span>
+                                                </div>
+                                            </a>
+
+
+
+                                            <div class="page-header">
+                                                <div class="page-title">
+                                                    <h3>Oil Assign To Warehouse</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="header-actions">
+                                            <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                <div class="dropdown custom-dropdown-icon">
+                                                    <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                        <%- include("logout") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="admin-data-content layout-top-spacing">
+
+                                    <div class="row layout-top-spacing" id="cancel-row">
+
+                                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                                            <div class="widget-content widget-content-area br-6"
+                                                style="height: 80vh; overflow: auto; ">
+                                                <!-- Button trigger modal -->
+
+                                                <div id="lloForm" class="card card-default collapse"
+                                                    style="display: block;">
+
+
+                                                    <!-- /.card-header -->
+
+                                                    <div class="card-body">
+
+
+                                                        <div class="row">
+                                                            <!-- <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Invoice</label>
+                                                                    <input type="text" id="invoice" name="invoice"
+                                                                        class="form-control"
+                                                                        placeholder="Enter invoice">
+                                                                </div>
+                                                            </div> -->
+                                                            <!-- <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Company</label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="company" onchange="changeFunc1();" name="company">
+                                                                        <option value="">Select Company </option>
+                                                                        <% for (const i in company) { %>
+                                                                            <option value="<%= company[i].id%>">
+                                                                                <%= company[i].company_name %>
+                                                                            </option>
+                                                                            <% } %>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Warehouse</label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="warehouse"
+                                                                        name="warehouse">
+                                                                        <option value="">Select Warehouse Name </option>
+                                                                        <% for (const i in w_house) { %>
+                                                                            <option value="<%= w_house[i].id%>">
+                                                                                <%= w_house[i].name %>
+                                                                            </option>
+                                                                            <% } %>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Oli </label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="category" name="category"
+                                                                        onchange="changeFunc();">
+                                                                        <option value="">Select Oil Name </option>
+                                                                        <% for (const i in userData) { %>
+                                                                            <option value="<%= userData[i].id%>">
+                                                                                <%= userData[i].oil_name %>
+                                                                            </option>
+                                                                            <% } %>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Quantity</label>
+                                                                    <input type="text" id="quantity" name="quantity"
+                                                                        class="form-control"
+                                                                        placeholder="Enter Oil Quantity">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Measurement Unit</label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="m_unit1" name="m_unit1">
+                                                                        <option value="">Select Measurement Unit
+                                                                        </option>
+                                                                        <% for (const i in m_unit) { %>
+                                                                            <option value="<%= m_unit[i].id%>">
+                                                                                <%= m_unit[i].varii %>
+                                                                            </option>
+                                                                            <% } %>
+
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="txtEmpCnic">issue Data.<label
+                                                                            id="_txtCustomerName-error" class="error"
+                                                                            for="txtEmpCnic"></label></label>
+                                                                    <div class="input-group">
+                                                                        <input id="basicFlatpickr" name="basicFlatpickr"
+                                                                            class="form-control flatpickr flatpickr-input active"
+                                                                            type="text"
+                                                                            placeholder="Select Issue Date..">
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <!-- /.card-Body employee -->
+
+
+
+                                                    </div>
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button type="text" class="btn btn-primary"
+                                                                    style="float: right;" id="btn">Add Oil</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+    <script src="/plugins/table/datatable/datatables.js"></script>
+    <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+    <script src="/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script>
+        $('#html5-extension').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            buttons: {
+                buttons: [
+                    { extend: 'copy', className: 'btn btn-sm' },
+
+                    { extend: 'csv', className: 'btn btn-sm' },
+                    { extend: 'excel', className: 'btn btn-sm' },
+                    { extend: 'print', className: 'btn btn-sm' }
+                ]
+            },
+            "oLanguage": {
+                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
+    <script src="/plugins/highlight/highlight.pack.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="/assets/js/scrollspyNav.js"></script>
+    <script src="/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="/assets/js/scrollspyNav.js"></script>
+    <script src="/plugins/flatpickr/flatpickr.js"></script>
+    <script src="/plugins/noUiSlider/nouislider.min.js"></script>
+
+    <!-- <script src="plugins/flatpickr/custom-flatpickr.js"></script> -->
+    <script src="/plugins/noUiSlider/custom-nouiSlider.js"></script>
+    <script src="/plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <script>
+        var f1 = flatpickr(document.getElementById('basicFlatpickr'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+    </script>
+    <script>
+        var ss = $(".basic").select2({
+            tags: true,
+        });
+
+    </script>
+
+
+
+    <script>
+
+        function changeFunc() {
+            var selectBox = document.getElementById("category");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log("han " + selectedValue);
+            //    $.get('/checkquan?id=' + selectedValue );
+            //    $.ajax({
+            //     type: 'GET',
+            //     url: '/checkquan?id=' + selectedValue,
+            //     dataType: 'json',
+            //     success: function(response){
+
+
+            //         var id = response[0]['id'];
+            //         var name = response[0]['oil_name'];
+            //         var quantity = response[0]['quantity'];
+            //         check_Q = quantity;
+            //         console.log(check_Q+" "+name);
+
+
+            //         function oilsub(){
+            //             console.log("umeed "+check_Q);
+            //         }
+
+            // },
+            // error: function (data) {
+            // console.log("Error.", data);
+            // }   
+            //    });
+
+            function getData() {
+                return $.ajax({
+                    url: '/checkquan?id=' + selectedValue,
+                    type: 'GET'
+                });
+            }
+
+            function handleData(data /* , textStatus, jqXHR */) {
+                var id = data['id'];
+                var name = data['oil_name'];
+                var quantity = data['qunatity'];
+                check_Q = quantity;
+                console.log(quantity);
+
+                var btn = document.getElementById("btn");
+                btn.addEventListener("click", function () {
+                    // var company = document.getElementById("company").value;
+                    var Warehouse = document.getElementById("warehouse").value;
+                    var Oli = document.getElementById("category").value;
+                    var unit = document.getElementById("m_unit1").value;
+                    var Quatities = document.getElementById("quantity").value;
+                    var basicFlatpickr = document.getElementById("basicFlatpickr").value;
+                    console.log("demand " + Quatities);
+                    console.log("avalaible " + check_Q);
+                    if (check_Q >= Quatities) {
+                        return $.ajax({
+                            url: '/oilissued?warehouse=' + Warehouse + '&category=' + Oli + '&m_unit1=' + unit + '&quantity=' + Quatities + '&main_id=' + id + '&mainoil=' + check_Q + '&issued_date=' + basicFlatpickr,
+                            type: 'GET',
+                            datatype: 'json',
+                            success: function (response) {
+                                $('.widget-content .message').on('click', function () {
+                                    swal({
+                                        title: 'Saved succesfully',
+                                        padding: '2em'
+                                    })
+                                })
+
+                                console.log("updated")
+                                window.location.reload();
+                            },
+                        });
+
+                    }
+                    else {
+                        alert("Oil not Available..... Only " + check_Q + " Ltr Available");
+                    }
+
+                })
+
+                //do some stuff
+            }
+
+            getData().done(handleData);
+        }
+
+
+    </script>
+
+<script>
+    function changeFunc1() {
+        var selectBox = document.getElementById("company");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        console.log("han " + selectedValue);
+
+        $.ajax({
+                type: 'GET',
+                url: '/comp_wearhouse?id=' + selectedValue,
+                dataType: 'json',
+                success: function (response) {
+
+                    var len = response.length;
+
+                    $("#warehouse").empty();
+                    for (var i = 0; i < len; i++) {
+
+                        var id = response[i]['wearhouse_id'];
+                        var no = response[i]['name'];
+                        console.log(id + "  " + no)
+                        //$("#area2").append("<option value='"+id+"'>"+name+"</option>");
+                        $('#warehouse').append(`<option value="${id}">${no}</option>`);
+
+                    }
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+    }
+
+</script>
+
+
+    <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
+</body>
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:54 GMT -->
+
+</html>

@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:52 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Bilal Associates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link href="/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/custom-nouiSlider.css" rel="stylesheet" type="text/css">
+    <link href="plugins/bootstrap-range-Slider/bootstrap-slider.css" rel="stylesheet" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-select/bootstrap-select.min.css">
+
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+</head>
+<style>
+    .select3 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border: 1px solid #bfc9d4;
+        color: #3b3f5c !important;
+        font-size: 15px;
+        padding: 8px 10px;
+        letter-spacing: 1px;
+        background-color: #fff;
+        height: auto;
+        padding: .75rem 1.25rem;
+        border-radius: 6px;
+        box-shadow: none;
+
+
+    }
+
+    .select3::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #f6f7f8;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: .25s all ease;
+        -o-transition: .25s all ease;
+        transition: .25s all ease;
+    }
+
+    /* Transition */
+    .select3:hover::after {
+        color: #f6f7f8;
+    }
+</style>
+
+<body class="sidebar-noneoverflow admin-header">
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+        <script>
+            var check_Q;
+        </script>
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <%- include("sidebar") %>
+            <!--  END SIDEBAR  -->
+
+            <!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+                <div class="layout-px-spacing">
+                    <script>
+                        var product =[];
+                        var p_name =[];
+                        var selects = [];
+                        var other_item = [];
+                        var other_quantity = [];
+
+                    </script>
+                    <div class="content-container">
+
+                        <div class="col layout-top-spacing">
+                            <div class="col-content">
+
+                                <div class="header-container">
+                                    <header class="header navbar navbar-expand-sm">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0);" class="sidebarCollapse"
+                                                data-placement="bottom">
+                                                <div class="bt-menu-trigger">
+                                                    <span></span>
+                                                </div>
+                                            </a>
+
+
+
+                                            <div class="page-header">
+                                                <div class="page-title">
+                                                    <h3>Other Product Issuance</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="header-actions">
+                                            <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                <div class="dropdown custom-dropdown-icon">
+                                                    <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                        <%- include("logout") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="admin-data-content layout-top-spacing">
+
+                                    <div class="row layout-top-spacing" id="cancel-row">
+
+                                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                                            <div class="widget-content widget-content-area br-6">
+                                                <!-- Button trigger modal -->
+
+                                                <div id="lloForm" class="card card-default collapse"
+                                                    style="display: block;">
+
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">Issuance
+                                                        </h3>
+                                                    </div>
+                                                    <!-- /.card-header -->
+
+                                                    <div class="card-body">
+
+                                                        <div class="row">
+                                                            <!-- <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label for="txtEmpCnic">
+                                                                        Remarks<label id="_txtCustomerName-error"
+                                                                            class="error"
+                                                                            for="txtEmpCnic"></label></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" id="remark" name="remark"
+                                                                            class="form-control"
+                                                                            placeholder="Enter Remark">
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                            <!-- <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Company</label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="company" name="company"
+                                                                        onchange="changeFunc2();">
+
+                                                                        <option value="">Select Company</option>
+                                                                        <% for (const i in company) { %>
+                                                                            <option value="<%= company[i].id%>">
+                                                                                <%= company[i].company_name %>
+                                                                            </option>
+                                                                            <% } %>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div> -->
+
+
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Products</label>
+                                                                    <select class="selectpicker" data-width="100%"
+                                                                        id="product" name="product"
+                                                                        onchange="changeFunc1()">
+                                                                        <option value="">Select Products</option>
+                                                                        <option value="oil">Oil</option>
+                                                                        <option value="tyre">Tyre</option>
+                                                                        <option value="other">Other</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div id="oil_form" class="col-lg-12" style="display: none;">
+                                                                <form action="/oil_issue_warehouse" method="post">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Invoice No</label>
+                                                                                <input type="text" id="invoice"
+                                                                                    name="invoice" required
+                                                                                    placeholder="Enter Invoice"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>WareHouse</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="WareHouse"
+                                                                                    name="WareHouse">
+
+                                                                                    <option value="">Select Warehouse
+                                                                                    </option>
+                                                                                    <% for (const i in w_house) { %>
+                                                                                        <option
+                                                                                            value="<%= w_house[i].id%>">
+                                                                                            <%= w_house[i].name %>
+                                                                                        </option>
+                                                                                        <% } %>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Oli Name</label>
+                                                                                <input type="text" id="p_name" name="p_name"
+                                                                                    required placeholder="Enter Product Name"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Oli Code</label>
+                                                                                <input type="text" id="p_code" name="p_code"
+                                                                                    required maxlength="12" class="form-control"
+                                                                                    placeholder="Enter Product Code">
+                                                                            </div>
+                                                                        </div> -->
+
+
+
+
+                                                                        <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Oli Category</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true" data-width="100%"
+                                                                                    id="category" name="category">
+                                                                                    <option value="">Select Category </option>
+                                                                                    
+        
+                                                                                </select>
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Brand Name</label>
+                                                                                <input type="text" id="sub_category"
+                                                                                    required name="sub_category"
+                                                                                    maxlength="12" class="form-control"
+                                                                                    placeholder="Brand Name">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Quantity</label>
+                                                                                <input type="text" id="quantity"
+                                                                                    name="quantity" class="form-control"
+                                                                                    placeholder="Enter Oil Quantity">
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Oli Retail Price</label>
+                                                                                <input type="text" id="retail" name="retail"
+                                                                                    placeholder="Enter Retail Price"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Product Order Price</label>
+                                                                                <input type="text" id="order" name="order" class="form-control" placeholder="Enter Order Price">
+                                                                            </div>
+                                                                        </div> -->
+
+
+
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Measurement Unit</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="m_unit"
+                                                                                    name="m_unit">
+                                                                                    <option value="0">Select Measurement
+                                                                                        Unit
+                                                                                    </option>
+                                                                                    <% for (const i in varii) { %>
+                                                                                        <option
+                                                                                            value="<%= varii[i].id%>">
+                                                                                            <%= varii[i].varii %>
+                                                                                        </option>
+                                                                                        <% } %>
+
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Valid Date</label>
+                                                                                <input id="basicFlatpickr"
+                                                                                    name="basicFlatpickr"
+                                                                                    value="2020-09-04"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Date.."
+                                                                                    readonly="readonly">
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Discription</label>
+                                                                                <textarea class="form-control"
+                                                                                    id="discription" rows="3"
+                                                                                    name="discription"></textarea>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-primary"
+                                                                                    style="float: right;"
+                                                                                    id="oilbtn">Submit</button>
+                                                                                <button
+                                                                                    onclick="location.href='/warehouseTowarehouse';"
+                                                                                    type="button" class="btn  mr-3 "
+                                                                                    style="float: right;">
+                                                                                    Cancel
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+
+
+                                                            </div>
+                                                            <div id="tyre_form" class="col-lg-12"
+                                                                style="display: none;">
+
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Invoice No</label>
+                                                                            <input type="text" id="invoice1"
+                                                                                name="invoice1" required
+                                                                                placeholder="Enter Invoice"
+                                                                                class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>WareHouse</label>
+                                                                            <select class="selectpicker"
+                                                                                data-live-search="true"
+                                                                                data-width="100%" id="WareHouse1"
+                                                                                name="WareHouse1">
+
+                                                                                <option value="">Select Warehouse
+                                                                                </option>
+                                                                                <% for (const i in w_house) { %>
+                                                                                    <option value="<%= w_house[i].id%>">
+                                                                                        <%= w_house[i].name %>
+                                                                                    </option>
+                                                                                    <% } %>
+
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Product Name</label>
+                                                                            <input type="text" id="p_name1" name="p_name1"
+                                                                                placeholder="Enter Product Name"
+                                                                                class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Product Code</label>
+                                                                            <input type="text" id="p_code1" name="p_code1"
+                                                                                maxlength="12" class="form-control"
+                                                                                placeholder="Enter Product Code">
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Product Category</label>
+                                                                            <select class="selectpicker"
+                                                                                data-live-search="true"
+                                                                                data-width="100%" id="category1"
+                                                                                name="category1">
+                                                                                <option value="">Select Category
+                                                                                </option>
+
+
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Brand Name</label>
+                                                                            <input type="text" id="sub_category1"
+                                                                                name="sub_category1" maxlength="12"
+                                                                                class="form-control"
+                                                                                placeholder="Enter Brand Name">
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Sub Category Quantity</label>
+                                                                                <input type="number" id="select_btn"
+                                                                                    name="select_btn" class="form-control"
+                                                                                    placeholder="Quentity">
+                                                                            </div>
+                                                                        </div> -->
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Company</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true" data-width="100%"
+                                                                                    id="company" name="company"
+                                                                                    onchange="changeFunc1();">
+        
+                                                                                    <option value="">Select Company</option>
+                                                                                    <% for (const i in company) { %>
+                                                                                        <option value="<%= company[i].id%>">
+                                                                                            <%= company[i].company_name %>
+                                                                                        </option>
+                                                                                        <% } %>
+        
+                                                                                </select>
+                                                                            </div>
+                                                                        </div> -->
+
+
+
+
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>WareHouse</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="WareHouse"
+                                                                                    name="WareHouse">
+    
+                                                                                    <option value="">Select Warehouse
+                                                                                    </option>
+    
+    
+                                                                                </select>
+                                                                            </div>
+                                                                        </div> -->
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Product Retail Price</label>
+                                                                                <input type="text" id="retail" name="retail"
+                                                                                    placeholder="Enter Retail Price"
+                                                                                    class="form-control">
+                                                                            </div>
+                                                                        </div> -->
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Product Order Price</label>
+                                                                                <input type="text" id="order" name="order" class="form-control" placeholder="Enter Order Price">
+                                                                            </div>
+                                                                        </div> -->
+
+
+                                                                    <!-- <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Measurement Unit</label>
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="m_unit1"
+                                                                                    name="m_unit1">
+                                                                                    <option value="">Select Measurement Unit
+                                                                                    </option>
+                                                                                    <option value="nhi">Select Measurement
+                                                                                        Unit
+                                                                                    </option>
+    
+    
+                                                                                </select>
+                                                                            </div>
+                                                                        </div> -->
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Issue Date</label>
+                                                                            <input id="basicFlatpickr1"
+                                                                                name="basicFlatpickr1"
+                                                                                class="form-control flatpickr flatpickr-input active"
+                                                                                type="text" placeholder="Select Date.."
+                                                                                readonly="readonly">
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Discription</label>
+                                                                            <textarea class="form-control"
+                                                                                id="discription1" rows="3"
+                                                                                name="discription1"></textarea>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12" id="dynamic_field">
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="row mb-5">
+                                                                    <div class="col-md-12">
+                                                                        <button type="button" name="add" id="add"
+                                                                            class="btn btn-primary"
+                                                                            style="float: right;">Add Sub
+                                                                            Products</button>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary"
+                                                                                style="float: right;"
+                                                                                id="tyre_btn">Submit</button>
+                                                                            <button onclick="location.href='/';"
+                                                                                type="button" class="btn  mr-3 "
+                                                                                style="float: right;">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div id="other_form" class="col-lg-12"
+                                                                style="display: none;">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Invoice No</label>
+                                                                            <input type="text" id="invoice2"
+                                                                                name="invoice2" required
+                                                                                placeholder="Enter Invoice"
+                                                                                class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Invoice Total Price</label>
+                                                                            <input type="text" id="t_price2" name="t_price2"
+                                                                                placeholder="Enter Retail Price"
+                                                                                class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+
+
+                                                                   
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Invoice Date</label>
+                                                                            <input id="basicFlatpickr2"
+                                                                                name="basicFlatpickr2" 
+                                                                                class="form-control flatpickr flatpickr-input active"
+                                                                                type="text" placeholder="Select Date.."
+                                                                                readonly="readonly">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>WareHouse</label>
+                                                                            <select class="selectpicker"
+                                                                                data-live-search="true"
+                                                                                data-width="100%" id="WareHouse2"
+                                                                                name="WareHouse2">
+
+                                                                                <option value="">Select Warehouse
+                                                                                </option>
+                                                                                <% for (const i in w_house) { %>
+                                                                                    <option value="<%= w_house[i].id%>">
+                                                                                        <%= w_house[i].name %>
+                                                                                    </option>
+                                                                                    <% } %>
+
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Discription</label>
+                                                                            <textarea class="form-control"
+                                                                                id="discription2" rows="3"
+                                                                                name="discription2"></textarea>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12" id="dynamic_field1">
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="row mb-5">
+                                                                    <div class="col-md-12">
+                                                                        <button type="button" name="add1" id="add1"
+                                                                            class="btn btn-primary"
+                                                                            style="float: right;">Add Sub
+                                                                            Products</button>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary"
+                                                                                style="float: right;"
+                                                                                id="other_btn">Submit</button>
+                                                                            <button onclick="location.href='/';"
+                                                                                type="button" class="btn  mr-3 "
+                                                                                style="float: right;">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+    </div>
+    <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+    <script src="/plugins/table/datatable/datatables.js"></script>
+    <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+    <script src="/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script>
+        $('#html5-extension').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            buttons: {
+                buttons: [
+                    { extend: 'copy', className: 'btn btn-sm' },
+
+                    { extend: 'csv', className: 'btn btn-sm' },
+                    { extend: 'excel', className: 'btn btn-sm' },
+                    { extend: 'print', className: 'btn btn-sm' }
+                ]
+            },
+            "oLanguage": {
+                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
+    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/flatpickr/flatpickr.js"></script>
+    <script src="plugins/noUiSlider/nouislider.min.js"></script>
+
+    <!-- <script src="plugins/flatpickr/custom-flatpickr.js"></script> -->
+    <script src="plugins/noUiSlider/custom-nouiSlider.js"></script>
+    <script src="plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <script>
+        var f1 = flatpickr(document.getElementById('basicFlatpickr'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr2'));
+        var f3 = flatpickr(document.getElementById('t_date'));
+        //var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+    </script>
+    <script>
+        var ss = $(".basic").select2({
+            tags: true,
+        });
+
+    </script>
+    <script type="text/javascript">
+    // -----------------------------tyre---------------------------------
+        $(document).ready(function () {
+
+            var i = 0;
+
+            $("#add").click(function () {
+                i++;
+                $('#dynamic_field').append('<div class="row" id="row' + i + '"><div class="col-md-12"><h4>Sub Category ' + i + ' .</h4></div><div class="col-md-5"><div class="form-group"><label>Product Name</label><input type="text" placeholder="Product Name" class="form-control" name="name[]" id="name[]"></div></div><div class="col-md-5"><div class="form-group"><label>Product No</label><input type="text" placeholder="Enter Product No" class="form-control" name="no[]" id="no[]"></div></div><div class="col-md-2"><div class="form-group"><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove" style="margin-top:30px">X</button></div></div></div>');
+            });
+
+            $(document).on('click', '.btn_remove', function () {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+
+        });
+        var btn = document.getElementById("tyre_btn");
+
+        btn.addEventListener("click", function () {
+            // var name = document.getElementsByName('name[]');
+            var inps = document.getElementsByName('no[]');
+            var sele = document.getElementsByName('name[]');
+
+
+            // for (var i = 0; i < name.length; i++) {
+            //     var inp = name[i];
+            //     p_name1.push(inp.value);
+            //     // alert("email["+i+"].value="+inp.value);
+            //     console.log("nam3 " + p_name1);
+                
+
+            // }
+            // var p_names = JSON.stringify(p_name);
+            for (var i = 0; i < inps.length; i++) {
+                var inp1 = inps[i];
+                product.push(inp1.value);
+                // alert("email["+i+"].value="+inp1.value);
+                console.log("n0 " + product);
+
+            }
+            var products = JSON.stringify(product);
+            for (var i = 0; i < sele.length; i++) {
+                var inp2 = sele[i];
+
+                selects.push(inp2.value);
+
+                // alert("email["+i+"].value="+inp2.value);
+                console.log("na "+selects);
+
+            }
+            var select = JSON.stringify(selects);
+
+
+            // console.log( product + selects + p_name);
+
+            var invoice = document.getElementById("invoice1").value;
+            var WareHouse = document.getElementById("WareHouse1").value;
+            var p_name1 = document.getElementById("p_name1").value;
+            var p_code = document.getElementById("p_code1").value;
+            var category = document.getElementById("category1").value;
+            var brand_name = document.getElementById("sub_category1").value;
+            var isue_date = document.getElementById("basicFlatpickr1").value;
+            // var company = document.getElementById("company").value;
+            var discription = document.getElementById("discription1").value;
+            console.log("Wearhouse id  "+WareHouse + " " + discription + " " + invoice + " " + brand_name);
+            var create_date = new Date().toLocaleString();
+            // var image = document.getElementById("image").value;
+
+            // console.log(" ARRYA "+ product + " " + selects  +" "+ p_name);
+            // console.log("nAME"  + p_name1 );
+            // capacity Vehicle_alloc chasis_no engine_no dop reg_state purchase_price dor
+            // console.log("make "+capacity+ Vehicle_alloc+ chasis_no+ engine_no+ dop+ reg_state+ purchase_price +dor );
+            $.ajax({
+                type: 'get',
+                url: '/tyre_warehouse?invoice=' + invoice + '&WareHouse=' + WareHouse + '&p_name=' + p_name1 + '&p_code=' + p_code + '&category=' + category + '&brand_name=' + brand_name + '&isue_date=' + isue_date + '&discription=' + discription+ '&product=' + products + '&pro_name=' + select,
+                datatype: 'json',
+                success: function (response) {
+                    $('.widget-content .message').on('click', function () {
+                        swal({
+                            title: 'Saved succesfully',
+                            padding: '2em'
+                        })
+                    })
+
+                    console.log("updated")
+                    window.location.reload();
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+            //Do something here
+        }, false);
+                
+
+    </script>
+
+    <script type="text/javascript">
+    // -------------------------------others-----------------------------------------
+        $(document).ready(function () {
+
+            var i = 0;
+
+            $("#add1").click(function () {
+                i++;
+                $('#dynamic_field1').append('<div class="row" id="row' + i + '"><div class="col-md-12"><h4>Sub Category ' + i + ' .</h4></div><div class="col-md-5"><div class="form-group"><label>Product Name</label><input type="text" placeholder="Product Name" class="form-control" name="o_name[]" id="o_name[]"></div></div><div class="col-md-5"><div class="form-group"><label>Quantity</label><input type="text" placeholder="Enter Quantity" class="form-control" name="o_quantity[]" id="o_quantity[]"></div></div><div class="col-md-2"><div class="form-group"><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove" style="margin-top:30px">X</button></div></div></div>');
+            });
+
+            $(document).on('click', '.btn_remove', function () {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
+            var btn = document.getElementById("other_btn");
+
+        btn.addEventListener("click", function () {
+            // var name = document.getElementsByName('name[]');
+            var inps = document.getElementsByName('o_quantity[]');
+            var sele = document.getElementsByName('o_name[]');
+            other_quantity 
+            other_item
+
+            
+            for (var i = 0; i < inps.length; i++) {
+                var inp1 = inps[i];
+                other_quantity.push(inp1.value);
+                console.log("n0 " + other_quantity);
+
+            }
+            var quantities = JSON.stringify(other_quantity);
+            for (var i = 0; i < sele.length; i++) {
+                var inp2 = sele[i];
+
+                other_item.push(inp2.value);
+                console.log("na "+other_item);
+
+            }
+            var items = JSON.stringify(other_item);
+
+
+            // console.log( product + selects + p_name);
+
+            var invoices = document.getElementById("invoice2").value;
+            var WareHouses = document.getElementById("WareHouse2").value;
+            var invoice_date = document.getElementById("basicFlatpickr2").value;
+            var invoice_price = document.getElementById("t_price2").value;
+            var discriptions = document.getElementById("discription2").value;
+            console.log("Wearhouse id  "+WareHouses + " " + discriptions + " " + invoices);
+            var create_date = new Date().toLocaleString();
+            // var image = document.getElementById("image").value;
+
+            // console.log(" ARRYA "+ product + " " + selects  +" "+ p_name);
+            // console.log("nAME"  + p_name1 );
+            // capacity Vehicle_alloc chasis_no engine_no dop reg_state purchase_price dor
+            // console.log("make "+capacity+ Vehicle_alloc+ chasis_no+ engine_no+ dop+ reg_state+ purchase_price +dor );
+            $.ajax({
+                type: 'get',
+                url: '/others_product_warehouse?invoices=' + invoices + '&WareHouses=' + WareHouses + '&invoice_date=' + invoice_date + '&invoice_price=' + invoice_price + '&discriptions=' + discriptions+ '&items=' + items + '&quantities=' + quantities,
+                datatype: 'json',
+                success: function (response) {
+                    $('.widget-content .message').on('click', function () {
+                        swal({
+                            title: 'Saved succesfully',
+                            padding: '2em'
+                        })
+                    })
+
+                    console.log("updated")
+                    window.location.reload();
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+            //Do something here
+        }, false);
+        });
+    </script>
+    <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
+
+    <script>
+      
+        function changeFunc1() {
+            var selectBox = document.getElementById("WareHouse");
+            // var company_id = document.getElementById("company").value;
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log("han " + selectedValue);
+
+            var products = document.getElementById("product").value;
+            if (products == 'oil') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+                targetDiv.style.display = "block";
+                targetDiv2.style.display = "none";
+                targetDiv3.style.display = "none";
+
+            }
+            if (products == 'tyre') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+
+                targetDiv.style.display = "none";
+                targetDiv2.style.display = "block";
+                targetDiv3.style.display = "none";
+
+            }
+
+            if (products == 'other') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+
+                targetDiv.style.display = "none";
+                targetDiv2.style.display = "none";
+                targetDiv3.style.display = "block";
+            }
+
+
+            
+        }
+        
+    </script>
+
+
+
+</body>
+
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:54 GMT -->
+
+</html>

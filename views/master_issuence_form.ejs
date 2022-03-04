@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:52 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Bilal Associates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link href="/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/noUiSlider/custom-nouiSlider.css" rel="stylesheet" type="text/css">
+    <link href="plugins/bootstrap-range-Slider/bootstrap-slider.css" rel="stylesheet" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-select/bootstrap-select.min.css">
+
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+</head>
+<style>
+    .select3 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border: 1px solid #bfc9d4;
+        color: #3b3f5c !important;
+        font-size: 15px;
+        padding: 8px 10px;
+        letter-spacing: 1px;
+        background-color: #fff;
+        height: auto;
+        padding: .75rem 1.25rem;
+        border-radius: 6px;
+        box-shadow: none;
+
+
+    }
+
+    .select3::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #f6f7f8;
+        cursor: pointer;
+        pointer-events: none;
+        -webkit-transition: .25s all ease;
+        -o-transition: .25s all ease;
+        transition: .25s all ease;
+    }
+
+    /* Transition */
+    .select3:hover::after {
+        color: #f6f7f8;
+    }
+</style>
+
+<body class="sidebar-noneoverflow admin-header">
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+        <script>
+            var check_Q;
+        </script>
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <%- include("sidebar") %>
+            <!--  END SIDEBAR  -->
+
+            <!--  BEGIN CONTENT AREA  -->
+            <div id="content" class="main-content">
+                <div class="layout-px-spacing">
+                    <script>
+                        var product = [];
+                        var p_name = [];
+                        var selects = [];
+                        var other_item = [];
+                        var other_quantity = [];
+
+                    </script>
+                    <div class="content-container">
+
+                        <div class="col layout-top-spacing">
+                            <div class="col-content">
+
+                                <div class="header-container">
+                                    <header class="header navbar navbar-expand-sm">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0);" class="sidebarCollapse"
+                                                data-placement="bottom">
+                                                <div class="bt-menu-trigger">
+                                                    <span></span>
+                                                </div>
+                                            </a>
+
+
+
+                                            <div class="page-header">
+                                                <div class="page-title">
+                                                    <h3>Product Issuance To Vehicle</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="header-actions">
+                                            <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                <div class="dropdown custom-dropdown-icon">
+                                                    <div class="nav-item dropdown language-dropdown more-dropdown">
+                                                        <%- include("logout") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </header>
+                                </div>
+
+                                <div class="admin-data-content layout-top-spacing">
+
+                                    <div class="row layout-top-spacing" id="cancel-row">
+
+                                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                                            <div class="widget-content widget-content-area br-6">
+                                                <!-- Button trigger modal -->
+
+                                                <div id="lloForm" class="card card-default collapse"
+                                                    style="display: block;">
+
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">Issuance
+                                                        </h3>
+                                                    </div>
+                                                    <!-- /.card-header -->
+
+                                                    <div class="card-body">
+
+                                                        <div class="row">
+                                                            <!-- <div class="col-lg-4">
+                                                                <div class="form-group">
+                                                                    <label for="txtEmpCnic">
+                                                                        Remarks<label id="_txtCustomerName-error"
+                                                                            class="error"
+                                                                            for="txtEmpCnic"></label></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" id="remark" name="remark"
+                                                                            class="form-control"
+                                                                            placeholder="Enter Remark">
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                            <!-- <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Company</label>
+                                                                    <select class="selectpicker" data-live-search="true"
+                                                                        data-width="100%" id="company" name="company"
+                                                                        onchange="changeFunc2();">
+
+                                                                        <option value="">Select Company</option>
+                                                                        <% for (const i in company) { %>
+                                                                            <option value="<%= company[i].id%>">
+                                                                                <%= company[i].company_name %>
+                                                                            </option>
+                                                                            <% } %>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div> -->
+
+
+
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Products</label>
+                                                                    <select class="selectpicker" data-width="100%"
+                                                                        id="product" name="product"
+                                                                        onchange="changeFunc1()">
+                                                                        <option value="">Select Products</option>
+                                                                        <option value="oil">Oil</option>
+                                                                        <option value="tyre">Tyre</option>
+                                                                        <option value="other">Other</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div id="oil_form" class="col-lg-12" style="display: none;">
+                                                               
+                                                                    <div class="row ">
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Warehouse</label>
+
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="WareHouse_o"
+                                                                                    name="WareHouse_o" onchange="changeFunc_oil()">
+                                                                                    <option value="">Select Warehouse
+                                                                                    </option>
+                                                                                    <% for (const i in w_house) { %>
+                                                                                        <option value="<%= w_house[i].id%>">
+                                                                                            <%= w_house[i].name %>
+                                                                                        </option>
+                                                                                        <% } %>
+
+
+                                                                                </select>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Vehicle Number</label>
+
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="v_no_o"
+                                                                                    name="v_no_o">
+                                                                                    <option selected="selected"
+                                                                                        value="0">--Select
+                                                                                        Vehicle-----</option>
+                                                                                        <% for (const i in vehicle_reg) { %>
+                                                                                            <option value="<%= vehicle_reg[i].id%>">
+                                                                                                <%= vehicle_reg[i].v_no %>
+                                                                                            </option>
+                                                                                            <% } %>
+
+                                                                                </select>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <div class="form-group">
+                                                                                <label for="txtFirstName">Oil Type</label>
+                                                                                <div class="input-group">
+                                                                                    <select class="selectpicker"
+                                                                                        data-live-search="true"
+                                                                                        data-width="100%" id="oil_type_o"
+                                                                                        name="oil_type_o">
+                                                                                        <option selected="selected"
+                                                                                            value="0">--Select
+                                                                                            Oil Type-----</option>
+
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="txtEDob"> Quantity</label>
+
+                                                                                <div class="input-group date"
+                                                                                    data-target-input="nearest">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="quantity_o" name="quantity_o"
+                                                                                        placeholder="Enter Quantity">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlgender">Working
+                                                                                    Hours</label>
+                                                                                <div class="input-group">
+                                                                                    <select class="selectpicker"
+                                                                                        data-live-search="true"
+                                                                                        data-width="100%" id="work_hr_o"
+                                                                                        name="work_hr_o">
+                                                                                        <option value="0">--Select
+                                                                                            Hours--</option>
+                                                                                        <option value="1">1 hr</option>
+                                                                                        <option value="2">2 hr</option>
+                                                                                        <option value="3">3 hr</option>
+                                                                                        <option value="4">4 hr</option>
+                                                                                        <option value="5">5 hr</option>
+                                                                                        <option value="6">6 hr</option>
+                                                                                        <option value="7">7 hr</option>
+                                                                                        <option value="8">8 hr</option>
+                                                                                        <option value="9">9 hr</option>
+                                                                                        <option value="10">10 hr
+                                                                                        </option>
+                                                                                        <option value="11">11 hr
+                                                                                        </option>
+                                                                                        <option value="12">12 hr
+                                                                                        </option>
+                                                                                        <option value="13">13 hr
+                                                                                        </option>
+                                                                                        <option value="14">14 hr
+                                                                                        </option>
+                                                                                        <option value="15">15 hr
+                                                                                        </option>
+                                                                                        <option value="16">16 hr
+                                                                                        </option>
+                                                                                        <option value="17">17 hr
+                                                                                        </option>
+                                                                                        <option value="18">18 hr
+                                                                                        </option>
+                                                                                        <option value="19">19 hr
+                                                                                        </option>
+                                                                                        <option value="20">20 hr
+                                                                                        </option>
+                                                                                        <option value="21">21 hr
+                                                                                        </option>
+                                                                                        <option value="22">22 hr
+                                                                                        </option>
+                                                                                        <option value="23">23 hr
+                                                                                        </option>
+                                                                                        <option value="24">24 hr
+                                                                                        </option>
+
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Oil Change Hours</label>
+                                                                                <input id="change_hr_o"
+                                                                                    class="form-control" type="text"
+                                                                                    name="change_hr_o"
+                                                                                    placeholder="Enter Hour">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Expected hours</label>
+                                                                                <input id="expect_hr_o"
+                                                                                    class="form-control" type="text"
+                                                                                    name="expect_hr_o"
+                                                                                    placeholder="Enter Expected Hour">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Current Odometer</label>
+                                                                                <input id="current_odo_o"
+                                                                                    class="form-control" type="text"
+                                                                                    name="current_odo_o"
+                                                                                    placeholder="Current Odometer">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus">Next Odometer</label>
+                                                                                <input id="next_odo_o"
+                                                                                    class="form-control" type="text"
+                                                                                    name="next_odo_o"
+                                                                                    placeholder="Next Odometer">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Issue Date</label>
+                                                                                <input id="basicFlatpickr"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Date.."
+                                                                                    name="basicFlatpickr"
+                                                                                    placeholder="Enter Issue Date">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <!-- text input -->
+                                                                            <div class="form-group">
+                                                                                <label for="ddlstatus"> Expected Date</label>
+                                                                                <input id="basicFlatpickr1"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Expected Date.."
+                                                                                    name="basicFlatpickr1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <div class="form-group">
+                                                                                <label for="txtEmpCnic">
+                                                                                    Remarks</label>
+                                                                                <div class="input-group">
+                                                                                    <textarea class="form-control"
+                                                                                        id="remark_o" rows="3" name="remark_o"
+                                                                                        placeholder="Enter Remarks"></textarea>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-primary"
+                                                                                    style="float: right;"
+                                                                                    id="assign_oil">Submit</button>
+                                                                                <button
+                                                                                    onclick="location.href='/warehouseTowarehouse';"
+                                                                                    type="button" class="btn  mr-3 "
+                                                                                    style="float: right;">
+                                                                                    Cancel
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                            </div>
+                                                            <div id="tyre_form" class="col-lg-12"
+                                                                style="display: none;">
+
+                                                                <div class="row ">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>WareHouse</label>
+                                                                            <select class="selectpicker"
+                                                                                data-live-search="true"
+                                                                                data-width="100%" id="WareHouse_t"
+                                                                                name="WareHouse_t">
+
+                                                                                <option value="">Select Warehouse
+                                                                                </option>
+                                                                                <% for (const i in w_house) { %>
+                                                                                    <option value="<%= w_house[i].id%>">
+                                                                                        <%= w_house[i].name %>
+                                                                                    </option>
+                                                                                    <% } %>
+
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtFirstName">Issuance Date
+                                                                            </label>
+                                                                            <div class="input-group">
+                                                                                <input id="basicFlatpickr1_t"
+                                                                                    name="basicFlatpickr1_t"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Issue Date..">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtLastName">
+                                                                                Vehicle No </label>
+                                                                            <div class="input-group">
+                                                                                <!-- <input type="text" id="v_no" name="v_no"
+                                                                                    class="form-control" placeholder="Enter Vehicle No"> -->
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="v_no_t"
+                                                                                    name="v_no_t">
+                                                                                    <option selected="selected"
+                                                                                        value="0">--Select Vehicle-----
+                                                                                    </option>
+                                                                                    <% for (const i in vehicle_reg) { %>
+                                                                                        <option value="<%= vehicle_reg[i].id%>">
+                                                                                            <%= vehicle_reg[i].v_no %>
+                                                                                        </option>
+                                                                                        <% } %>
+                                                                                </select>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- <div class="col-md-6">
+
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">Qty.<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="qty" name="qty"
+                                                                                    class="form-control"
+                                                                                    placeholder="Enter Quantity">
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div> -->
+
+
+
+
+                                                                    <div class="col-md-6">
+
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">Current
+                                                                                Odometer.<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="c_odo_t"
+                                                                                    name="c_odo_t" class="form-control"
+                                                                                    placeholder="Enter Current Odometer">
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="col-md-6">
+
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">Next Odometer.<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="n_odo"
+                                                                                    name="n_odo" class="form-control"
+                                                                                    placeholder="Enter Next Odometer">
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="col-md-6">
+
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">Expected Data.<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <input id="basicFlatpickr1"
+                                                                                    name="basicFlatpickr1"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Next Date..">
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtLastName">
+                                                                                Tyre Brand</label>
+                                                                            <div class="input-group">
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="t_brand"
+                                                                                    name="t_brand"
+                                                                                    onchange="changeFunc2();">
+                                                                                    <option value="0">--Select Vehicle
+                                                                                        Type--</option>
+                                                                                    <% for (const i in brand2) { %>
+                                                                                        <option
+                                                                                            value="<%= brand2[i].id%>">
+                                                                                            <%= brand2[i].sub_category
+                                                                                                %>
+                                                                                        </option>
+                                                                                        <% } %>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtFirstName">Tyre
+                                                                                Number</label>
+                                                                            <div class="input-group">
+                                                                                <select class="select3" id="t_num"
+                                                                                    name="t_num">
+                                                                                    <option value="0">--Select Vehicle
+                                                                                        Type--</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">
+                                                                                Remarks<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <textarea type="text" id="remark"
+                                                                                    name="remark" class="form-control"
+                                                                                    placeholder="Enter Remark">
+                                                                                </textarea>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- <div class="col-lg-4">
+                                                                    <div class="form-group">
+                                                                        <label for="txtLastName">
+                                                                                  <label id="_txtCustomerName-error" class="error" for="txtLastName"></label></label>
+                                                                        <div class="input-group">
+                                                                            <button class="btn btn-primary btn-rounded mb-2">Add Item</button>
+        
+                                                                </div> -->
+
+                                                                </div>
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary"
+                                                                                style="float: right;"
+                                                                                id="">Submit</button>
+                                                                            <button onclick="location.href='/';"
+                                                                                type="button" class="btn  mr-3 "
+                                                                                style="float: right;">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div id="other_form" class="col-lg-12"
+                                                                style="display: none;">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>WareHouse</label>
+                                                                            <select class="selectpicker"
+                                                                                data-live-search="true"
+                                                                                data-width="100%" id="WareHouse"
+                                                                                name="WareHouse">
+
+                                                                                <option value="">Select Warehouse
+                                                                                </option>
+                                                                                <% for (const i in w_house) { %>
+                                                                                    <option value="<%= w_house[i].id%>">
+                                                                                        <%= w_house[i].name %>
+                                                                                    </option>
+                                                                                    <% } %>
+
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <div class="form-group">
+                                                                            <label for="txtFirstName">Issuance Date
+                                                                            </label>
+                                                                            <div class="input-group">
+                                                                                <input id="basicFlatpickr"
+                                                                                    name="basicFlatpickr"
+                                                                                    class="form-control flatpickr flatpickr-input active"
+                                                                                    type="text"
+                                                                                    placeholder="Select Issue Date..">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <div class="form-group">
+                                                                            <label for="txtLastName">
+                                                                                Vehicle No </label>
+                                                                            <div class="input-group">
+                                                                                <!-- <input type="text" id="v_no" name="v_no"
+                                                                                    class="form-control" placeholder="Enter Vehicle No"> -->
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="v_no"
+                                                                                    name="v_no">
+                                                                                    <option selected="selected"
+                                                                                        value="0">
+                                                                                        --Select Vehicle-----</option>
+                                                                                    <% for (const i in vehicle_reg) { %>
+                                                                                        <option
+                                                                                            value="<%= vehicle_reg[i].id%>">
+                                                                                            <%= vehicle_reg[i].v_no %>
+                                                                                        </option>
+                                                                                        <% } %>
+                                                                                </select>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <!-- text input -->
+                                                                        <div class="form-group">
+                                                                            <label for="txtEDob"> Vechicle Type</label>
+
+                                                                            <div class="input-group date"
+                                                                                id="reservationdate2"
+                                                                                data-target-input="nearest">
+
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="v_type"
+                                                                                    name="v_type">
+                                                                                    <option value="0">--Select Vehicle
+                                                                                        Type--</option>
+                                                                                    <option value="1">Truck,Trailor
+                                                                                    </option>
+                                                                                    <option value="2">Oil Tanker
+                                                                                    </option>
+                                                                                    <option value="3">Lifter RS</option>
+                                                                                    <option value="4">Fork Lifter
+                                                                                    </option>
+                                                                                    <option value="5">Crane</option>
+                                                                                    <option value="6">LTV</option>
+                                                                                    <option value="7">Motorcycle
+                                                                                    </option>
+                                                                                    <option value="8">OP</option>
+                                                                                </select>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">Qty.<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="qty" name="qty"
+                                                                                    class="form-control"
+                                                                                    placeholder="Enter Quantity">
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                    
+
+
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label for="txtLastName">
+                                                                                Tyre Brand</label>
+                                                                            <div class="input-group">
+                                                                                <select class="selectpicker"
+                                                                                    data-live-search="true"
+                                                                                    data-width="100%" id="t_brand"
+                                                                                    name="t_brand"
+                                                                                    onchange="changeFunc1();">
+                                                                                    <option value="0">--Select Vehicle
+                                                                                        Type--</option>
+                                                                                    <% for (const i in brand) { %>
+                                                                                        <option
+                                                                                            value="<%= brand[i].id%>">
+                                                                                            <%= brand[i].sub_category %>
+                                                                                        </option>
+                                                                                        <% } %>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label for="txtFirstName">Product
+                                                                                Name</label>
+                                                                            <div class="input-group">
+                                                                                <select class="select3" id="t_num"
+                                                                                    name="t_num">
+                                                                                    <option value="0">--Select Product
+                                                                                        Name--</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <div class="form-group">
+                                                                            <label for="txtEmpCnic">
+                                                                                Remarks<label
+                                                                                    id="_txtCustomerName-error"
+                                                                                    class="error"
+                                                                                    for="txtEmpCnic"></label></label>
+                                                                            <div class="input-group">
+
+                                                                                <textarea class="form-control"
+                                                                                    id="remark" rows="3"
+                                                                                    name="remark"></textarea>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                </div>
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary"
+                                                                                style="float: right;"
+                                                                                id="">Submit</button>
+                                                                            <button onclick="location.href='/';"
+                                                                                type="button" class="btn  mr-3 "
+                                                                                style="float: right;">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+    </div>
+    <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+
+    <script src="/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+    <script src="/plugins/table/datatable/datatables.js"></script>
+    <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+    <script src="/plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/jszip.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
+    <script src="/plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script>
+        $('#html5-extension').DataTable({
+            "dom": "<'dt--top-section'<'row'<'col-sm-12 col-md-6 d-flex justify-content-md-start justify-content-center'B><'col-sm-12 col-md-6 d-flex justify-content-md-end justify-content-center mt-md-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+            buttons: {
+                buttons: [
+                    { extend: 'copy', className: 'btn btn-sm' },
+
+                    { extend: 'csv', className: 'btn btn-sm' },
+                    { extend: 'excel', className: 'btn btn-sm' },
+                    { extend: 'print', className: 'btn btn-sm' }
+                ]
+            },
+            "oLanguage": {
+                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                "sInfo": "Showing page _PAGE_ of _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "Search...",
+                "sLengthMenu": "Results :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 10
+        });
+    </script>
+    <script src="plugins/highlight/highlight.pack.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/flatpickr/flatpickr.js"></script>
+    <script src="plugins/noUiSlider/nouislider.min.js"></script>
+
+    <!-- <script src="plugins/flatpickr/custom-flatpickr.js"></script> -->
+    <script src="plugins/noUiSlider/custom-nouiSlider.js"></script>
+    <script src="plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <script>
+        var f1 = flatpickr(document.getElementById('basicFlatpickr'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+        var f2 = flatpickr(document.getElementById('basicFlatpickr2'));
+        var f3 = flatpickr(document.getElementById('t_date'));
+        //var f2 = flatpickr(document.getElementById('basicFlatpickr1'));
+    </script>
+    <script>
+        var ss = $(".basic").select2({
+            tags: true,
+        });
+
+    </script>
+
+
+
+    <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
+
+    <script>
+
+        function changeFunc1() {
+            var selectBox = document.getElementById("WareHouse");
+            // var company_id = document.getElementById("company").value;
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log("han " + selectedValue);
+
+            var products = document.getElementById("product").value;
+            if (products == 'oil') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+                targetDiv.style.display = "block";
+                targetDiv2.style.display = "none";
+                targetDiv3.style.display = "none";
+
+            }
+            if (products == 'tyre') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+
+                targetDiv.style.display = "none";
+                targetDiv2.style.display = "block";
+                targetDiv3.style.display = "none";
+
+            }
+
+            if (products == 'other') {
+                const targetDiv = document.getElementById("oil_form");
+                const targetDiv2 = document.getElementById("tyre_form");
+                const targetDiv3 = document.getElementById("other_form");
+
+
+                targetDiv.style.display = "none";
+                targetDiv2.style.display = "none";
+                targetDiv3.style.display = "block";
+            }
+
+
+
+        }
+
+    </script>
+
+<script>
+    function changeFunc_oil() {
+        var selectBox = document.getElementById("WareHouse_o");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        console.log("han " + selectedValue);
+      
+        function getData() {
+            return $.ajax({
+                url: '/oil_toVehicle?id=' + selectedValue,
+                type: 'GET'
+            });
+        }
+
+        function handleData(data /* , textStatus, jqXHR */) {
+            // alert(data[0]['oil_name']);
+            var id = data['warehouse_id'];
+            var name = data['name'];
+            var quantity = data['quantity'];
+            check_Q = quantity;
+
+            console.log("Oil quantity " + check_Q);
+
+            var btn = document.getElementById("assign_oil");
+            btn.addEventListener("click", function () {
+
+                var WareHouse_o = document.getElementById("WareHouse_o").value;
+                var v_no_o = document.getElementById("v_no_o").value;
+                var oil_type_o = document.getElementById("oil_type_o").value;
+                var Quatities = document.getElementById("quantity_o").value;
+                var work_hr_o = document.getElementById("work_hr_o").value;
+                var change_hr_o = document.getElementById("change_hr_o").value;
+                var expect_hr_o = document.getElementById("expect_hr_o").value;
+                var current_odo_o = document.getElementById("current_odo_o").value;
+                var next_odo_o = document.getElementById("next_odo_o").value;
+                var issue_date_o = document.getElementById("basicFlatpickr").value;
+                var expect_date_o = document.getElementById("basicFlatpickr1").value;
+                var remark_o = document.getElementById("remark_o").value;
+
+                console.log("Andar " + Quatities);
+                if (check_Q >= Quatities) {
+                    return $.ajax({
+                        url: '/oil_to_vehi?WareHouse_o=' + WareHouse_o + '&v_no_o=' + v_no_o + '&oil_type_o=' + oil_type_o + '&Quatities=' + Quatities + '&work_hr_o=' + work_hr_o + '&change_hr_o=' + change_hr_o + '&expect_hr_o=' + expect_hr_o + '&current_odo_o=' + current_odo_o + '&main_id=' + id + '&total=' + check_Q + '&next_odo_o=' + next_odo_o + '&issue_date_o=' + issue_date_o + '&expect_date_o=' + expect_date_o + '&remark_o=' + remark_o,
+                        type: 'GET',
+                        datatype: 'json',
+                        success: function (response) {
+                            console.log("updated")
+                            window.location.reload();
+                        },
+                    });
+
+                }
+                else {
+                    alert("Quantity not Available..... Only " + check_Q + " Ltr oil Available.");
+                }
+
+
+            })
+
+            //do some stuff
+        }
+
+        getData().done(handleData);
+    }
+</script>
+
+    <script>
+        function changeFunc2() {
+            var selectBox = document.getElementById("t_brand");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            console.log("han " + selectedValue);
+            //    $.get('/area?id=' + selectedValue );
+            $.ajax({
+                type: 'GET',
+                url: '/t_num?id=' + selectedValue,
+                dataType: 'json',
+                success: function (response) {
+
+                    var len = response.length;
+
+                    $("#t_num").empty();
+                    for (var i = 0; i < len; i++) {
+
+                        var id = response[i]['id'];
+                        var no = response[i]['product_no'];
+                        console.log(id + "  " + no)
+                        //$("#area2").append("<option value='"+id+"'>"+name+"</option>");
+                        $('#t_num').append(`<option value="${id}">${no}</option>`);
+
+                    }
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+            });
+
+            function getData() {
+                return $.ajax({
+                    url: '/check_tyre_quan?id=' + selectedValue,
+                    type: 'GET'
+                });
+            }
+
+            function handleData(data /* , textStatus, jqXHR */) {
+                // alert(data[0]['oil_name']);
+                var id = data['id'];
+                var name = data['product_name'];
+                var quantity = data['quantity'];
+                check_Q = quantity;
+
+                console.log("Tyre quantity " + check_Q);
+
+                var btn = document.getElementById("btn");
+                btn.addEventListener("click", function () {
+                    var i_date = document.getElementById("basicFlatpickr").value;
+                    var v_no = document.getElementById("v_no").value;
+                    var v_type = document.getElementById("v_type").value;
+                    var Quatities = document.getElementById("qty").value;
+                    var remark = document.getElementById("remark").value;
+                    var t_num = document.getElementById("t_num").value;
+                    var t_brand = document.getElementById("t_brand").value;
+                    var WareHouse = document.getElementById("WareHouse").value;
+                    var c_odo = document.getElementById("c_odo").value;
+                    var n_odo = document.getElementById("n_odo").value;
+                    var expect_date = document.getElementById("basicFlatpickr1").value;
+
+                    console.log("Andar " + Quatities);
+                    if (check_Q >= Quatities) {
+                        return $.ajax({
+                            url: '/create_tyre_issue?i_date=' + i_date + '&v_no=' + v_no + '&v_type=' + v_type + '&Quatities=' + Quatities + '&remark=' + remark + '&t_num=' + t_num + '&t_brand=' + t_brand + '&WareHouse=' + WareHouse + '&main_id=' + id + '&total=' + check_Q + '&c_odo=' + c_odo + '&n_odo=' + n_odo + '&expect_date=' + expect_date,
+                            type: 'GET'
+                        });
+                        alert("Submmited ...")
+                    }
+                    else {
+                        alert("Quantity not Available..... Only " + check_Q + " Tyre Available.");
+                    }
+
+                })
+
+                //do some stuff
+            }
+
+            getData().done(handleData);
+        }
+    </script>
+
+
+
+</body>
+
+
+<!-- Mirrored from designreset.com/cork/ltr/demo12/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 May 2021 05:26:54 GMT -->
+
+</html>
